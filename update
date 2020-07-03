@@ -12,7 +12,7 @@ BUNDLE_EXT_NAME='.bundle'
 BUNDLE_EXT_INDEX=-1*len(BUNDLE_EXT_NAME)
 
 print('[Info]Update Bundle repo...')
-os.system('git -C %s pull origin %s > /dev/null' % (BUNDLE_PATH, BUNDLE_BRANCH))
+os.system('git -C %s pull origin %s:%s > /dev/null' % (BUNDLE_PATH, BUNDLE_BRANCH, BUNDLE_BRANCH))
 os.system('git -C %s checkout %s > /dev/null' % (BUNDLE_PATH, BUNDLE_BRANCH))
 print("-------------------------------------------")
 
